@@ -1,18 +1,43 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Form from './components/Form/Form'
 import './App.css';
 
+
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      currentUser: {
+        name: '',
+        surname: '',
+        country: '',
+        birthDay: '',
+      }
+    };
+
+    this.onSend = this.onSend.bind(this)
+  }
+
+  onSend(user){
+    console.log('onSend en padre funciona')
+    this.setState({
+      currentUser:{
+        name: user.name,
+        surname: user.surname,
+        country: user.country,
+        birthday: user.birthday,
+      }
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <h1>Intive-FDV Exercise</h1>
+        <div className="container">
+          <Form  onSubmit={this.onSend}/>
+        </div>
       </div>
     );
   }
