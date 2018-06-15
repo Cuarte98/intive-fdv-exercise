@@ -66,7 +66,7 @@ class Form extends Component {
                         <input type="date" name="birthday" id="" value={this.state.birthday} onChange={this.handleChange} max="2018-12-31" required/>
                     </label>
 
-                    <input type="submit" value="Submit" />
+                    <input type="submit" value="Save" />
                 </form>
             </div>
         )
