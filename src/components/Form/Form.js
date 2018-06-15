@@ -5,10 +5,10 @@ class Form extends Component {
     constructor(props){
         super(props);
         this.state = {
-            name: null,
-            surname: null,
+            name: '',
+            surname: '',
             country: 'Afghanistan',
-            birthday: null,
+            birthday: '',
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,9 +18,9 @@ class Form extends Component {
         fetch('https://restcountries.eu/rest/v2/all')
         .then(results => {return results.json()})
         .then(data => {
-            let countryNames = data.map(country => {
+            let countryNames = data.map((country, index) => {
                 return(
-                    <option value={country.name}>{country.name}</option>
+                    <option key={index} value={country.name}>{country.name}</option>
                 )   
             })
             this.setState({countrys: countryNames})

@@ -50,7 +50,7 @@ class App extends Component {
   }
 
   ageCalc(year){
-    let currentDate = new Date;
+    let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
     console.log(currentYear)
     return parseInt(currentYear, 10) - year;
