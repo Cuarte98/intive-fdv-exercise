@@ -30,8 +30,8 @@ class App extends Component {
 
   onSend(user){
     let birthdayArray  = user.birthday.split('-')
-    console.log(birthdayArray[0])
-    let age = this.ageCalc(birthdayArray[0])
+    console.log(birthdayArray)
+    let age = this.ageCalc(birthdayArray)
     console.log(age)
     this.setState({
       currentUser:{
@@ -46,15 +46,23 @@ class App extends Component {
       },
       messageActive: true,
     });
-    
   }
 
-  ageCalc(year){
+  ageCalc(date){
     let currentDate = new Date();
-    let currentYear = currentDate.getFullYear();
-    console.log(currentYear)
-    return parseInt(currentYear, 10) - year;
+    let currentYear = parseInt(currentDate.getFullYear(), 10);
+    let yearsold = currentYear - date[0]
+    if(date[1] < currentDate.getMonth() + 1){
+      yearsold += 1
+    } else if(date[1] == currentDate.getMonth() + 1){
+      if(date[2] < currentDate.getDate()){
+        yearsold += 1
+      }
+    }
+
+    return yearsold;
   }
+
   render() {
     let message = null
     if(this.state.messageActive){
