@@ -49,11 +49,11 @@ class Form extends Component {
                 <form action="" onSubmit={this.handleSubmit} >
                     <label>
                         Name
-                        <input type="text" name='name' value={this.state.name} onChange={this.handleChange} required/>
+                        <input type="text" name='name' value={this.state.name} onChange={this.handleChange} placeholder="Your name here" required/>
                     </label>    
                     <label>
                         Surname
-                        <input type="text" name='surname' value={this.state.surname} onChange={this.handleChange} required/>
+                        <input type="text" name='surname' value={this.state.surname} onChange={this.handleChange} placeholder="Your surname here" required/>
                     </label>
                     <label>
                         Country
@@ -63,7 +63,7 @@ class Form extends Component {
                     </label>
                     <label>
                         Birthday    
-                        <input type="date" name="birthday" id="" value={this.state.birthday} onChange={this.handleChange} max="2018-06-15" required/>
+                        <input type="date" name="birthday" id="" value={this.state.birthday} onChange={this.handleChange} max="2018-12-31" required/>
                     </label>
 
                     <input type="submit" value="Submit" />

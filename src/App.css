@@ -30,6 +30,15 @@
 .container {
   background-color:#c7ecee;
     width: 1200px;
-    height: 800px;
+    height: 100%;
     margin: auto;
+    overflow:hidden;
+    position: relative;
+}
+
+.author{
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0 10px 0 0;
 }
