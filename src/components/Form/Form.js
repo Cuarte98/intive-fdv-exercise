@@ -7,7 +7,7 @@ class Form extends Component {
         this.state = {
             name: null,
             surname: null,
-            country: null,
+            country: 'Afghanistan',
             birthday: null,
         }
         this.handleChange = this.handleChange.bind(this)
