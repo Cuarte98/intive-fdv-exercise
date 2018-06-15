@@ -2,13 +2,18 @@
     form {
         position: relative;
         float: left;
-        margin: 0 auto 0 0;
+        margin: 0 auto 20px 0;
         border: 1px solid black;
+        width: 47%;
+        padding: 20px 10px;
         label{
-            display: block;
-            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
             input{
                 margin: 0 0 0 5px;
+                position: relative;
+                right: 0;
             }
         }
     }
