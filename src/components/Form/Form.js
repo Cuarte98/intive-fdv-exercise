@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import './styles.scss'
+import PropTypes from 'prop-types';
+import './styles.scss';
 
 class Form extends Component {
     constructor(props){
@@ -72,6 +73,10 @@ class Form extends Component {
         )
     }
 };
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired
+}
 
 
 

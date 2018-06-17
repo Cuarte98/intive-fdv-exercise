@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import './styles.scss';
 
  class Table extends Component {
@@ -47,5 +48,8 @@ import './styles.scss';
     }
  }
 
+Table.propTypes = {
+    user: PropTypes.object
+}
 
  export default Table;
